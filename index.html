@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#203629">
+  <meta name="description"
+    content="Discover the royal taste of Biryani Bliss. Explore authentic Indian biryanis, kebabs, desserts and more.">
+  <title>Biryani Bliss | The Royal Taste of Biryani</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+
+  <div class="announcement">
+    The Royal Aroma of Authentic Indian Biryani
+    <span>Demo hours · 11 AM – 10 PM</span>
+  </div>
+
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Biryani Bliss home">
+      <span class="brand-icon">B</span>
+      <span>BIRYANI <small>BLISS</small></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="nav" id="navigation">
+      <a href="#home">Home</a>
+      <a href="#menu">Our Menu</a>
+      <a href="#about">Our Story</a>
+      <a href="#location">Find Us</a>
+      <button class="cart-button" id="openCart">
+        Your Cart <span id="cartCount">0</span>
+      </button>
+    </nav>
+  </header>
+
+
+
+
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="eyebrow">A ROYAL INDIAN FEAST</span>
+
+        <h1>The Nawabi taste of <span>biryani.</span></h1>
+
+        <p>
+          Discover the hidden secrets of spices in every fragrant grain
+          of basmati. Rich aromas, authentic Indian flavours and
+          the timeless magic of dum-cooked biryani.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#menu">Explore Our Menu ↗</a>
+          <a class="btn btn-outline" href="#location">Find Our Restaurant</a>
+        </div>
+
+        <div class="hero-note">
+          <span>✦ Aromatic basmati</span>
+          <span>✦ Indian spices</span>
+          <span>✦ Royal flavours</span>
+        </div>
+      </div>
+
+      <div class="hero-image">
+        <img src="https://i.pinimg.com/736x/6b/49/49/6b494901c46bdbd7e89a0960cf7a0910.jpg"
+          alt="Fragrant Indian biryani with long-grain basmati rice and spices">
+
+        <div class="floating-card">
+          <span>✦ OUR SIGNATURE</span>
+          <strong>The magic of dum biryani</strong>
+          <small>Tradition in every bite.</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="highlights">
+      <div><span>01</span>
+        <p>Authentic Indian flavours</p>
+      </div>
+      <div><span>02</span>
+        <p>Aromatic spices</p>
+      </div>
+      <div><span>03</span>
+        <p>Biryani made special</p>
+      </div>
+      <div><span>04</span>
+        <p>A feast to remember</p>
+      </div>
+    </section>
+
+    <section class="menu-section section" id="menu">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">FROM OUR INDIAN KITCHEN</span>
+          <h2>A royal feast, <span>served hot.</span></h2>
+          <p>From signature biryanis to Indian favourites and sweet endings.</p>
+        </div>
+
+        <div class="search-box">
+          <span>⌕</span>
+          <input id="menuSearch" type="search" placeholder="Search biryani, kebab..." aria-label="Search menu">
+        </div>
+      </div>
+
+      <div class="categories" id="categories">
+        <button class="category active" data-category="All" aria-pressed="true">All dishes</button>
+        <button class="category" data-category="Biryani" aria-pressed="false">Biryani</button>
+        <button class="category" data-category="Starters" aria-pressed="false">Starters</button>
+        <button class="category" data-category="Main Course" aria-pressed="false">Main course</button>
+        <button class="category" data-category="Breads" aria-pressed="false">Breads</button>
+        <button class="category" data-category="Desserts" aria-pressed="false">Desserts</button>
+        <button class="category" data-category="Drinks" aria-pressed="false">Drinks</button>
+      </div>
+
+      <!-- Menu Search Section -->
+      <section class="menu-search">
+        <div class="search-container">
+          <span class="search-icon">⌕</span>
+
+          <input type="text" id="menuSearch" placeholder="Search your favourite dishes..." autocomplete="off">
+
+          <button type="button" id="searchBtn">
+            Search
+          </button>
+        </div>
+
+        <p id="searchMessage" aria-live="polite"></p>
+      </section>
+
+
+
+      <div class="menu-grid" id="menuGrid"></div>
+      <p class="menu-message" id="menuMessage" aria-live="polite"></p>
+    </section>
+
+
+    <div class="menu-order-action">
+      <button type="button" class="order-now-btn" id="menuOrderNow">
+        Order Now →
+      </button>
+    </div>
+
+
+    <section class="story section" id="about">
+      <div class="story-image">
+        <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=1000&q=85"
+          alt="Traditional Indian biryani prepared with aromatic spices">
+      </div>
+
+      <div class="story-content">
+        <span class="eyebrow">OUR LOVE FOR INDIAN FLAVOURS</span>
+        <h2>Rooted in tradition.<br>Made for <span>biryani lovers.</span></h2>
+
+        <p>
+          At Biryani Bliss, biryani is more than a meal.
+          It is the aroma of spices, the richness of basmati rice
+          and the joy of sharing a truly satisfying Indian feast.
+        </p>
+
+        <p>
+          Inspired by the royal Nawabi tradition, our restaurant
+          celebrates bold flavours, comforting favourites and
+          the wonderful variety of Indian cuisine.
+        </p>
+
+
+        <a class="text-link" href="#menu">Discover our specialities ↗</a>
+      </div>
+    </section>
+
+    <section class="order-banner">
+      <div>
+        <span class="eyebrow">YOUR BIRYANI CRAVINGS, SORTED</span>
+        <h2>Ready for a royal feast?</h2>
+        <p>Explore the menu and find your next favourite dish.</p>
+      </div>
+
+      <a href="#" class="btn btn-light" id="zomatoButton" target="_blank" rel="noopener noreferrer" hidden>
+        Order on Zomato ↗
+      </a>
+    </section>
+
+    <section class="location section" id="location">
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">COME SHARE A FEAST</span>
+          <h2>Find your way to <span>Bliss.</span></h2>
+          <p>Visit us or contact our team for menu and ordering enquiries.</p>
+        </div>
+      </div>
+
+      <!-- OFFERS AND COUPONS -->
+      <section class="offers-section" id="offers">
+        <div class="offers-heading">
+          <p class="eyebrow">SPECIAL DEALS</p>
+          <h2>Offers made for biryani lovers</h2>
+          <p>More nawabi flavour, more savings!</p>
+        </div>
+
+        <div class="offer-card">
+          <div class="offer-badge">10% OFF</div>
+          <h3>Your Nawabi Treat</h3>
+          <p>Get 10% off on orders of ₹499 or more.</p>
+
+          <div class="coupon-code">
+            <span id="couponCode">NAWABI10</span>
+            <button type="button" id="copyCoupon">
+              Copy Code
+            </button>
+
+            <button type="button" class="order-now-btn offer-order-now">
+              Order Now →
+            </button>
+
+          </div>
+          <small>Enter this code in your cart.</small>
+        </div>
+
+
+
+
+        <div class="offer-card">
+          <div class="offer-badge">₹75 OFF</div>
+          <h3>Family Biryani Feast</h3>
+          <p>Save ₹75 on orders of ₹799 or more.</p>
+
+          <div class="coupon-code">
+            <span id="couponCode2">FEAST75</span>
+            <button type="button" id="copyCoupon2">
+              Copy Code
+            </button>
+
+            <button type="button" class="order-now-btn offer-order-now">
+              Order Now →
+            </button>
+
+          </div>
+          <small>Enter this code in your cart.</small>
+        </div>
+      </section>
+
+
+
+
+      <div class="location-grid">
+        <div class="map-frame">
+          <iframe id="mapFrame" title="Biryani Bliss restaurant location map"
+            src="https://www.google.com/maps?q=Jharsuguda%2C%20Odisha&output=embed" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+
+        <div class="location-details">
+          <div class="detail-item">
+            <span class="detail-icon">⌖</span>
+            <div>
+              <h3>Our address</h3>
+              <p id="restaurantAddress">Jharsuguda, Odisha, India</p>
+              <a class="text-link" id="directionsLink"
+                href="https://www.google.com/maps/search/?api=1&query=Jharsuguda%2C%20Odisha" target="_blank"
+                rel="noopener noreferrer">Get directions ↗</a>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-icon">◷</span>
+            <div>
+              <h3>Opening hours</h3>
+              <p id="restaurantHours">11:00 AM – 10:00 PM</p>
+              <small>Demo hours — confirm with the restaurant.</small>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <span class="detail-icon">☎</span>
+            <div>
+              <h3>Call us</h3>
+              <p id="restaurantPhone">Contact number to be added</p>
+              <a class="text-link" id="callLink" href="tel:+910000000000">Call restaurant ↗</a>
+            </div>
+          </div>
+
+          <a href="#" id="whatsappButton" class="btn btn-primary" target="_blank" rel="noopener noreferrer" hidden>
+            Enquire on WhatsApp ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand footer-brand" href="#home">
+      <span class="brand-icon">B</span>
+      <span>BIRYANI <small>BLISS</small></span>
+    </a>
+
+    <p>The Nawabi taste of biryani, with the hidden secrets of spices.</p>
+
+    <div class="footer-links">
+      <a href="#menu">Menu</a>
+      <a href="#location">Location</a>
+      <a href="#about">Our story</a>
+
+
+
+    </div>
+
+    <p class="copyright">
+      © <span id="year"></span> Biryani Bliss.
+      Demo website for portfolio use.
+    </p>
+  </footer>
+
+  <div class="overlay" id="cartOverlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle"
+    aria-hidden="true">
+    <div class="cart-header">
+      <div>
+        <span class="eyebrow">YOUR SELECTION</span>
+        <h2 id="cartTitle">Your cart</h2>
+      </div>
+      <button class="close-cart" id="closeCart" aria-label="Close cart">×</button>
+    </div>
+
+    <div id="cartItems" class="cart-items"></div>
+
+    <div class="cart-bottom">
+      <div class="cart-total">
+        <span>Item subtotal</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+
+      <p class="cart-note">
+        Final prices, availability, taxes and delivery charges
+        must be confirmed by the restaurant.
+      </p>
+
+      <button class="btn btn-primary checkout-button" id="checkoutButton">
+        Continue to order
+      </button>
+
+      <button class="clear-cart" id="clearCart">Clear cart</button>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+</body>
+
+</html>
